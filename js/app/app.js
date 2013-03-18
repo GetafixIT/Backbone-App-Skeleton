@@ -6,6 +6,8 @@ define(['backbone-min'], function() {
 //        });
 
 
+        
+
         return {
             init: function(){
                 console.info('App module initiated')
