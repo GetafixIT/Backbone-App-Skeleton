@@ -5,6 +5,7 @@ define(['backbone-min'], function() {
 //            getId: function() { return this.$el.selector.replace('#', '') }
 //        });
 
+
         return {
             init: function(){
                 console.info('App module initiated')
