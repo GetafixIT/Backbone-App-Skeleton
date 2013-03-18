@@ -10,4 +10,5 @@ define(['backbone-min'], function() {
                 console.info('App module initiated')
             }
         }
-});
+    }
+);
