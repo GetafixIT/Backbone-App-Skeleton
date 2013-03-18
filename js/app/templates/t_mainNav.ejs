@@ -1,7 +1,0 @@
-<ul>
-    <% _.each(menuItems.models, function(value, key, list){ %>
-        <li id="<%= value.get('id') %>" class="<%= value.get('selected') ? 'selected' : '' %>">
-            <a href="<%= value.get('url') %>" title="<%= value.get('title') %>"><%= value.get('name') %></a>
-        </li>
-    <% }); %>
-</ul>
