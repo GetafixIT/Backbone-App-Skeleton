@@ -24,7 +24,7 @@ require(['jasmine-html'], function(jasmine){
     loadCss('js/lib/jasmine-1.3.1/jasmine.css');
 
     specs.push('spec/models/m_spec_contact');
-	specs.push('spec/app_spec');
+	specs.push('spec/app/app_spec');
     
 
 
