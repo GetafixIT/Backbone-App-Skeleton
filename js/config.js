@@ -4,8 +4,15 @@ requirejs.config({
             deps: ['underscore-min', 'zepto-min', 'ejs-min'],
             exports: 'Backbone'
         },
-        'underscore': {
+        underscore: {
             exports: '_'
+        },
+        jasmine: {
+            exports: 'jasmine'
+        },
+        'jasmine-html': {
+            deps: ['jasmine'],
+            exports: 'jasmine'
         }
     },
     baseUrl: 'js/lib',
@@ -13,7 +20,10 @@ requirejs.config({
         app: '../app',
         view: '../app/views',
         model: '../app/models',
-        router: '../app/routers'
+        router: '../app/routers',
+        jasmine: 'jasmine-1.3.1/jasmine',
+        'jasmine-html': 'jasmine-1.3.1/jasmine-html',
+        spec: '../spec'
     }
 })
 
