@@ -1,4 +1,4 @@
-define(['spec/spec_config', 'backbone-min'], function(Test) {
+define(['backbone-min'], function(Test) {
 
     function initRouter(){
         // Initiate the router

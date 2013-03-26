@@ -6,7 +6,7 @@ define(['model/m_mainNav', 'router/r_mainNav', 'backbone-min'], function(mainNav
             var view = this;
 
             // Populates the collection with menu item models
-            _.each(this.pages, function(value, key, list){
+            _.each(this.pages, function(value){
                 view.collection.push(new mainNav.Model(value));
             });
 
@@ -17,7 +17,7 @@ define(['model/m_mainNav', 'router/r_mainNav', 'backbone-min'], function(mainNav
         collection: new mainNav.Collection(),
         template: new EJS({url: 'js/app/templates/t_mainNav.ejs'}),
         pages: [
-            {name: 'Tests', url: '#/tests', title: 'Runs the specs defined', id: 'mainNav1', selected: true}
+            {name: 'Tests', url: '#/tests', title: 'Runs the specs defined', id: 'testNavItem', selected: true}
         ],
         render: function(){
             this.template.update(this.$el[0], {menuItems: this.collection});
@@ -37,9 +37,7 @@ define(['model/m_mainNav', 'router/r_mainNav', 'backbone-min'], function(mainNav
 
 
     return {
-        init: function(){
-            new MainNavView();
-        }
+        View: MainNavView
     }
 
 });

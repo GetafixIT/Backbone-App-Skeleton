@@ -1,23 +1,46 @@
-define(['jasmine'], function(Model) {
+define(['jasmine'], function() {
+
+    var view;
 
     describe('App :: Check application dependencies are loaded', function() {
 
-        it('Underscore to be loaded', function() {
+        it('UnderscoreJS library to be loaded', function() {
             expect(_).toBeDefined();
         });
 
-        it('Zepto to be loaded', function() {
+        it('ZeptoJS library to be loaded', function() {
             expect($).toBeDefined();
         });
 
-        it('Backbone to be loaded', function() {
+        it('BackboneJS library to be loaded', function() {
             expect($).toBeDefined();
         });
 
-        it('EJS to be loaded', function() {
+        it('EJS library to be loaded', function() {
             expect(EJS).toBeDefined();
         });
 
+
+        describe('Backbone view extensions have been added', function() {
+
+            beforeEach(function(){
+                var BaseView = Backbone.View.extend({});
+                view = new BaseView;
+            });
+
+            it("Backbone view object contains a 'insertRoot' function", function() {
+                expect(view.insertRoot).toBeDefined();
+            });
+
+            it("Backbone view object contains a 'close' function", function() {
+                expect(view.close).toBeDefined();
+            });
+
+        });
+
+
     });
+
+
 
 });

@@ -2,7 +2,7 @@ define(['model/m_mainNav', 'jasmine'], function(MainNav) {
 
     var model, collection;
 
-    describe('Model :: Check man nav model', function() {
+    describe('Model :: Check main nav model', function() {
 
         beforeEach(function() {
             model = new MainNav.Model({
